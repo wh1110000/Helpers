@@ -21,7 +21,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Workhouse\\Datatable\\datatableServiceProvider"
+                "Workhouse\\Datatable\\DatatableServiceProvider"
             ]
         }
     }
