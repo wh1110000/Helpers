@@ -12,7 +12,7 @@
     "minimum-stability": "dev-master",
     "autoload": {
         "psr-4": {
-            "Workhouse\\Datatable\\": "src/"
+            "Workhouse\\DataTable\\": "src/"
         }
     },
     "require": {
@@ -21,7 +21,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Workhouse\\Datatable\\DatatableServiceProvider"
+                "Workhouse\\Datatable\\DataTableServiceProvider"
             ]
         }
     }
