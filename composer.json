@@ -1,0 +1,28 @@
+{
+    "name": "111-0000/datatable",
+    "description": "Contact",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Workhouse Marketing",
+            "email": "dev@workhousemarketing.com"
+        }
+    ],
+    "minimum-stability": "dev-master",
+    "autoload": {
+        "psr-4": {
+            "Workhouse\\Datatable\\": "src/"
+        }
+    },
+    "require": {
+        "111-0000/Workhouse": "dev-dev"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Workhouse\\Datatable\\datatableServiceProvider"
+            ]
+        }
+    }
+}
