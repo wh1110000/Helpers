@@ -9,7 +9,6 @@
             "email": "dev@workhousemarketing.com"
         }
     ],
-    "minimum-stability": "dev-master",
     "autoload": {
         "psr-4": {
             "Workhouse\\DataTable\\": "src/"
