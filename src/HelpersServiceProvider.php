@@ -3,6 +3,8 @@
 namespace Workhouse\Helpers;
 
 use Illuminate\Support\ServiceProvider;
+use Workhouse\Cms\Helpers\Menu\Admin;
+use Workhouse\Cms\Helpers\Menu\Website;
 use Workhouse\Helpers\Controllers\Button;
 use Workhouse\Helpers\Controllers\DataTable;
 use Workhouse\Helpers\Controllers\Fields;
@@ -28,6 +30,8 @@ class HelpersServiceProvider extends ServiceProvider {
 		$this->registerFields();
 
 		$this->registerButton();
+
+		$this->registerNav();
 	}
 
 	/**
@@ -75,6 +79,28 @@ class HelpersServiceProvider extends ServiceProvider {
 		$this->app->singleton('Button', function($app) {
 
 			return new Button($app['url'], $app['view']);
+		});
+	}
+
+	/**
+	 *
+	 */
+
+	public function registerNav(){
+
+		$this->app->singleton('Nav', function() {
+
+			$route = \Request()->route();
+
+			if(!is_null($route) && (\Str::startsWith($route->getName(), 'admin.'))){
+
+				return new Admin();
+
+			} else {
+
+				return new Website();
+			}
+
 		});
 	}
 
