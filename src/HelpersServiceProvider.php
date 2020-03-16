@@ -2,7 +2,9 @@
 
 namespace Workhouse\Helpers;
 
+use Doctrine\Common\Inflector\Inflector;
 use Illuminate\Support\ServiceProvider;
+use RealRashid\SweetAlert\ToSweetAlert;
 use Workhouse\Cms\Helpers\Menu\Admin;
 use Workhouse\Cms\Helpers\Menu\Website;
 use Workhouse\Helpers\Controllers\Button;
@@ -32,6 +34,31 @@ class HelpersServiceProvider extends ServiceProvider {
 		$this->registerButton();
 
 		$this->registerNav();
+	}
+
+	/**
+	 *
+	 */
+
+	public function boot(){
+
+		$this->loadViews();
+
+		Inflector::rules('singular', [
+
+			'irregular' => array(
+				'media'      => 'media',
+				'medium'      => 'medium'
+			)
+		] );
+
+		Inflector::rules('plural', [
+
+			'irregular' => array(
+				'media'      => 'media',
+				'medium'      => 'medium'
+			)
+		]);
 	}
 
 	/**
@@ -108,15 +135,6 @@ class HelpersServiceProvider extends ServiceProvider {
 	 *
 	 */
 
-	public function boot() {
-
-		$this->loadViews();
-	}
-
-	/**
-	 *
-	 */
-
 	public function loadViews(){
 
 		$this->loadViewsFrom(__DIR__.'/resources/views/datatable', 'datatable');
@@ -132,4 +150,6 @@ class HelpersServiceProvider extends ServiceProvider {
 			__DIR__ . '/resources/views' => resource_path('views/vendor/datatable')
 		], 'datatable-view');
 	}
+
+
 }
