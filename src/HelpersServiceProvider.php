@@ -47,7 +47,7 @@ class HelpersServiceProvider extends ServiceProvider {
 
 	public function loadViews(){
 
-		$this->loadViewsFrom(__DIR__.'/resources/views', 'datatable');
+		$this->loadViewsFrom(__DIR__.'/resources/views/datatable', 'datatable');
 	}
 
 	/**
