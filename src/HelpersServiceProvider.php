@@ -1,6 +1,6 @@
 <?php
 
-namespace Workhouse\DataTable;
+namespace Workhouse\Helpers;
 
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
@@ -12,7 +12,7 @@ use Workhouse\DataTable\Facades\DataTable as DataTableFacade;
  * @package Workhouse\DataTable
  */
 
-class DataTableServiceProvider extends ServiceProvider {
+class HelpersServiceProvider extends ServiceProvider {
 
 	/**
 	 *

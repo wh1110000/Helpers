@@ -32,10 +32,10 @@
                     "emptyTable": "No entries available"
                 },
                 "columns": [
-                        @empty(!$columns)
+                    @empty(!$columns)
                         @foreach($columns as $_index => $column)
-                    { "data" : "{{ $_index }}" , "name" : "{{ $_index }}", "targets": "{{ $loop->index }}", "orderable" : {{ !isset($column['orderable']) ? 'true' : 'false' }}, "visible" : {{ !isset($column['visible']) ? 'true' : 'false' }}, "width": "{{ !isset($column['width']) ? "" : $column['width'] }}%",  "class" : "{{isset($column['visible']) && $column['visible'] == false ? 'never' : '' }} {{ $loop->iteration == 2 ? 'all ' : ''  }}{{ isset($column['isImage']) && $column['isImage'] == true ? 'image ' : '' }}{{ !isset($column['class']) ? "" : $column['class'] }}"},
-                    @endforeach
+                            { "data" : "{{ $_index }}" , "name" : "{{ $_index }}", "targets": "{{ $loop->index }}", "orderable" : {{ !isset($column['orderable']) ? 'true' : 'false' }}, "visible" : {{ !isset($column['visible']) ? 'true' : 'false' }}, "width": "{{ !isset($column['width']) ? "" : $column['width'] }}%",  "class" : "{{isset($column['visible']) && $column['visible'] == false ? 'never' : '' }} {{ $loop->iteration == 2 ? 'all ' : ''  }}{{ isset($column['isImage']) && $column['isImage'] == true ? 'image ' : '' }}{{ !isset($column['class']) ? "" : $column['class'] }}"},
+                        @endforeach
                     @endempty
                 ],
                 "rowId": 'index',

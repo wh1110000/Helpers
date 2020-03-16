@@ -1,6 +1,6 @@
 {
-    "name": "111-0000/datatable",
-    "description": "Contact",
+    "name": "111-0000/helpers",
+    "description": "Helpers",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -11,7 +11,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Workhouse\\DataTable\\": "src/"
+            "Workhouse\\Helpers\\": "src/"
         }
     },
     "require": {
@@ -20,10 +20,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Workhouse\\DataTable\\DataTableServiceProvider"
+                "Workhouse\\Helpers\\HelpersServiceProvider"
             ],
             "aliases": {
-                "DataTable": "Workhouse\\DataTable\\Facades\\DataTable"
+                "DataTable": "Workhouse\\Helpers\\Facades\\DataTable"
             }
         }
     }
