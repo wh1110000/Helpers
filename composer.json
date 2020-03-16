@@ -34,7 +34,10 @@
                 "Row": "Workhouse\\Helpers\\Facades\\Row",
                 "Form": "Workhouse\\Helpers\\Facades\\Form",
                 "Html": "Workhouse\\Helpers\\Facades\\Html"
-            }
+            },
+            "dont-discover": [
+                "laravelcollective/html"
+            ]
         }
     }
 }
