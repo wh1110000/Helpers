@@ -1,6 +1,6 @@
 <?php
 
-namespace Workhouse\DataTable\Controllers;
+namespace Workhouse\Helpers\Controllers;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Arr;

@@ -2,10 +2,10 @@
 
 namespace Workhouse\Helpers;
 
-use Illuminate\Foundation\AliasLoader;
+//use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
-use Workhouse\DataTable\Controllers\DataTable;
-use Workhouse\DataTable\Facades\DataTable as DataTableFacade;
+use Workhouse\Helpers\Controllers\DataTable;
+//use Workhouse\DataTable\Facades\DataTable as DataTableFacade;
 
 /**
  * Class dataTableServiceProvider

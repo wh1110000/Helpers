@@ -1,6 +1,6 @@
 <?php
 
-namespace Workhouse\DataTable\Facades;
+namespace Workhouse\Helpers\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
