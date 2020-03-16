@@ -2,7 +2,10 @@
 
 namespace Workhouse\DataTable;
 
+use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
+use Workhouse\DataTable\Controllers\DataTable;
+use Workhouse\DataTable\Facades\DataTable as DataTableFacade;
 
 /**
  * Class dataTableServiceProvider
@@ -17,13 +20,16 @@ class DataTableServiceProvider extends ServiceProvider {
 
 	public function register() {
 
-		$this->app->bind('DataTable', function () {
+		$this->app->alias('DataTable', DataTable::class);
 
-			return new DataTable();
+		$this->app->singleton('DataTable', function () {
+
+			return new DataTable;
 		});
 
-		//$loader = \Illuminate\Foundation\AliasLoader::getInstance();
-		//$loader->alias('DataTable', \Workhouse\Cms\Facades\DataTable::class);
+		$loader = AliasLoader::getInstance();
+
+		$loader->alias('DataTable', DataTableFacade::class);
 	}
 
 	/**
@@ -34,7 +40,6 @@ class DataTableServiceProvider extends ServiceProvider {
 
 		$this->loadViews();
 	}
-
 
 	/**
 	 *
@@ -54,6 +59,5 @@ class DataTableServiceProvider extends ServiceProvider {
 		$this->publishes([
 			__DIR__ . '/resources/views' => resource_path('views/vendor/datatable')
 		], 'datatable-view');
-
 	}
 }

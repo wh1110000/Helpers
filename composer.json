@@ -21,8 +21,11 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Workhouse\\Datatable\\DataTableServiceProvider"
-            ]
+                "Workhouse\\DataTable\\DataTableServiceProvider"
+            ],
+            "aliases": {
+                "DataTable": "Workhouse\\DataTable\\Facades\\DataTable"
+            }
         }
     }
 }
