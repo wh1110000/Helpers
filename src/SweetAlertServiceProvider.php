@@ -17,6 +17,8 @@ class SweetAlertServiceProvider extends \RealRashid\SweetAlert\SweetAlertService
 
 	public function boot() {
 
+		parent::boot();
+
 		$this->loadMiddlewares();
 	}
 
