@@ -10,20 +10,30 @@
         }
     ],
     "autoload": {
+        "files": [
+            "src\\app\\Helpers\\Functions.php"
+        ],
         "psr-4": {
             "Workhouse\\Helpers\\": "src/"
         }
     },
     "require": {
-        "111-0000/workhouse": "dev-l7"
+        "laravelcollective/html": "^6.1"
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Workhouse\\Helpers\\HelpersServiceProvider"
+                "Workhouse\\Helpers\\HelpersServiceProvider",
+                "Workhouse\\Helpers\\HtmlServiceProvider"
             ],
             "aliases": {
-                "DataTable": "Workhouse\\Helpers\\Facades\\DataTable"
+                "Button": "Workhouse\\Helpers\\Facades\\Button",
+                "DataTable": "Workhouse\\Helpers\\Facades\\DataTable",
+                "Fields": "Workhouse\\Helpers\\Facades\\Fields",
+                "Nav": "Workhouse\\Helpers\\Facades\\Nav",
+                "Row": "Workhouse\\Helpers\\Facades\\Row",
+                "Form": "Collective\\Html\\FormFacade",
+                "Html": "Collective\\Html\\HtmlFacade"
             }
         }
     }

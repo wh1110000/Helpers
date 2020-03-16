@@ -2,14 +2,15 @@
 
 namespace Workhouse\Helpers;
 
-//use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
+use Workhouse\Helpers\Controllers\Button;
 use Workhouse\Helpers\Controllers\DataTable;
-//use Workhouse\DataTable\Facades\DataTable as DataTableFacade;
+use Workhouse\Helpers\Controllers\Fields;
+use Workhouse\Helpers\Controllers\Row;
 
 /**
- * Class dataTableServiceProvider
- * @package Workhouse\DataTable
+ * Class HelpersServiceProvider
+ * @package Workhouse\Helpers
  */
 
 class HelpersServiceProvider extends ServiceProvider {
@@ -20,16 +21,61 @@ class HelpersServiceProvider extends ServiceProvider {
 
 	public function register() {
 
-		//$this->app->alias('DataTable', DataTable::class);
+		$this->registerDataTable();
+
+		$this->registerRow();
+
+		$this->registerFields();
+
+		$this->registerButton();
+	}
+
+	/**
+	 *
+	 */
+
+	public function registerDataTable(){
 
 		$this->app->singleton('DataTable', function () {
 
 			return new DataTable;
 		});
+	}
 
-		//$loader = AliasLoader::getInstance();
+	/**
+	 *
+	 */
 
-		//$loader->alias('DataTable', DataTableFacade::class);
+	public function registerRow(){
+
+		$this->app->bind('Row', function() {
+
+			return new Row();
+		});
+	}
+
+	/**
+	 *
+	 */
+
+	public function registerFields(){
+
+		$this->app->bind('Fields', function() {
+
+			return new Fields();
+		});
+	}
+
+	/**
+	 *
+	 */
+
+	public function registerButton(){
+
+		$this->app->singleton('Button', function($app) {
+
+			return new Button($app['url'], $app['view']);
+		});
 	}
 
 	/**
