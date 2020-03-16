@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Facade;
  * @see \Collective\Html\FormBuilder
  */
 
-class html extends Facade {
+class Html extends Facade {
 
     /**
      * Get the registered name of the component.
