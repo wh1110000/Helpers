@@ -16,7 +16,7 @@
         }
     },
     "require": {
-        "111-0000/Workhouse": "dev-dev"
+        "111-0000/Workhouse": "dev-l7"
     },
     "extra": {
         "laravel": {
