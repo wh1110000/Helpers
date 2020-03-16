@@ -32,8 +32,8 @@
                 "Fields": "Workhouse\\Helpers\\Facades\\Fields",
                 "Nav": "Workhouse\\Helpers\\Facades\\Nav",
                 "Row": "Workhouse\\Helpers\\Facades\\Row",
-                "Form": "Collective\\Html\\FormFacade",
-                "Html": "Collective\\Html\\HtmlFacade"
+                "Form": "Workhouse\\Helpers\\Facades\\Form",
+                "Html": "Workhouse\\Helpers\\Facades\\Html"
             }
         }
     }
