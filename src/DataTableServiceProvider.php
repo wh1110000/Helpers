@@ -20,7 +20,7 @@ class DataTableServiceProvider extends ServiceProvider {
 
 	public function register() {
 
-		$this->app->alias('DataTable', DataTable::class);
+		//$this->app->alias('DataTable', DataTable::class);
 
 		$this->app->singleton('DataTable', function () {
 
