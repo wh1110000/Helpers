@@ -847,7 +847,7 @@ class DataTable {
 
 	public function render(){
 
-		return \View::make('components::datatable', [
+		return \View::make('datatable::table', [
 			'data' => $this->getData(),
 			'columns' => $this->getColumns(),
 			'route' => $this->getRoute(),

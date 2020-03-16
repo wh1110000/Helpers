@@ -27,9 +27,9 @@ class DataTableServiceProvider extends ServiceProvider {
 			return new DataTable;
 		});
 
-		$loader = AliasLoader::getInstance();
+		//$loader = AliasLoader::getInstance();
 
-		$loader->alias('DataTable', DataTableFacade::class);
+		//$loader->alias('DataTable', DataTableFacade::class);
 	}
 
 	/**
