@@ -4,9 +4,8 @@ namespace Workhouse\Helpers;
 
 use Doctrine\Common\Inflector\Inflector;
 use Illuminate\Support\ServiceProvider;
-use RealRashid\SweetAlert\ToSweetAlert;
-use Workhouse\Cms\Helpers\Menu\Admin;
-use Workhouse\Cms\Helpers\Menu\Website;
+use Workhouse\Cms\Services\Menu\Admin;
+use Workhouse\Cms\Services\Menu\Website;
 use Workhouse\Helpers\Controllers\Button;
 use Workhouse\Helpers\Controllers\DataTable;
 use Workhouse\Helpers\Controllers\Fields;
