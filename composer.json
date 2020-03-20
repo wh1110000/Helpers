@@ -35,9 +35,9 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Workhouse\\Helpers\\Providers\\HelpersServiceProvider",
-                "Workhouse\\Helpers\\Providers\\HtmlServiceProvider",
-                "Workhouse\\Helpers\\Providers\\SweetAlertServiceProvider"
+                "Workhouse\\Helpers\\HelpersServiceProvider",
+                "Workhouse\\Helpers\\HtmlServiceProvider",
+                "Workhouse\\Helpers\\SweetAlertServiceProvider"
             ],
             "aliases": {
                 "Button": "Workhouse\\Helpers\\Facades\\Button",
