@@ -136,7 +136,7 @@ class HelpersServiceProvider extends ServiceProvider {
 
 	public function loadViews(){
 
-		$this->loadViewsFrom($this->dir.'/resources/views/datatable', 'datatable');
+		$this->loadViewsFrom(__DIR__.'/resources/views/datatable', 'datatable');
 	}
 
 	/**
@@ -146,7 +146,7 @@ class HelpersServiceProvider extends ServiceProvider {
 	public function loadPublish(){
 
 		$this->publishes([
-			$this->dir . '/resources/views' => resource_path('views/vendor/datatable')
+			__DIR__ . '/resources/views' => resource_path('views/vendor/datatable')
 		], 'datatable-view');
 	}
 
