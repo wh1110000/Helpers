@@ -1,6 +1,6 @@
 <?php
 
-namespace Workhouse\Helpers;
+namespace Workhouse\Helpers\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Workhouse\Helpers\Controllers\FormBuilder;

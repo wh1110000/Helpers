@@ -1,6 +1,6 @@
 <?php
 
-namespace Workhouse\Helpers;
+namespace Workhouse\Helpers\Providers;
 
 use Doctrine\Common\Inflector\Inflector;
 use Illuminate\Support\ServiceProvider;
