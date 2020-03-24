@@ -3,6 +3,7 @@
 namespace Workhouse\Helpers;
 
 use Doctrine\Common\Inflector\Inflector;
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Workhouse\Cms\Services\Menu\Admin;
 use Workhouse\Cms\Services\Menu\Website;
@@ -10,6 +11,7 @@ use Workhouse\Helpers\Controllers\Button;
 use Workhouse\Helpers\Controllers\DataTable;
 use Workhouse\Helpers\Controllers\Fields;
 use Workhouse\Helpers\Controllers\Row;
+use Workhouse\Helpers\View\Components\Modal;
 
 /**
  * Class HelpersServiceProvider
@@ -40,6 +42,9 @@ class HelpersServiceProvider extends ServiceProvider {
 	 */
 
 	public function boot(){
+
+
+		Blade::component('modal', Modal::class);
 
 		$this->loadViews();
 
@@ -136,7 +141,8 @@ class HelpersServiceProvider extends ServiceProvider {
 
 	public function loadViews(){
 
-		$this->loadViewsFrom(__DIR__.'/resources/views/datatable', 'datatable');
+		$this->loadViewsFrom(__DIR__.'/resources/views/DataTable', 'datatable');
+		$this->loadViewsFrom(__DIR__.'/resources/views/Modal', 'modal');
 	}
 
 	/**
