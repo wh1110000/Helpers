@@ -20,7 +20,7 @@
     <div class="modal-footer">
         @if(!isset($hideCancelBtn) || $hideCancelBtn != true)
 
-            <button type="button" class="btn btn-default" data-dismiss="modal">{{ isset($closeBtnText) ? $closeBtnText : 'Cancel' }}</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">{{ isset($closeBtnText) ? $closeBtnText : ($result ? 'OK' : 'Cancel') }}</button>
         @endif
 
         {{ !empty($buttons) ? $buttons : '' }}

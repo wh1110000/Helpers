@@ -32,7 +32,6 @@ class FormBuilder extends \Collective\Html\FormBuilder {
 
 		$html = collect();
 
-
 		if($rows instanceof Tab){
 
 			foreach ($rows->tab as $tab){

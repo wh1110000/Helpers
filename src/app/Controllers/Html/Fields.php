@@ -442,6 +442,7 @@ class Fields {
 
 		} else if(in_array($name, \Form::getModel()->getFillable())){
 
+
 			$file = \Form::getModel()->getMedia($name);
 
 		} else {
@@ -963,6 +964,54 @@ class Fields {
 							});
 						});
 					</script>';
+
+		return $field ;
+	}
+
+	/**
+	 * This function is used in media library page only
+	 *
+	 * @param $src
+	 *
+	 * @return string
+	 */
+
+	public function fileFieldTemplate2($src){
+
+		$id = Str::slug($this->name);
+
+		$field =
+			'<div class="media-card">
+
+				'.\Html::image($src->getFilePlaceholder(), null, ["id" => "preview-'.$id.'", 'class' => 'card-img-top rounded-0', 'popup' => true]).'
+
+				<div class="header">
+                   
+                   '. $src->getFilename() .'
+                </div>
+  			
+  				<div class="footer">
+                	<div class="buttons-sm">
+                    	<a href="'. route("admin.media.edit.modal", $src) .'" class="btn btn-warning btn-sm active-modal"><i class="fas fa-edit" aria-hidden="true"></i> Edit</a>
+
+                        <a href="'. route("admin.media.delete", $src) .'" class="btn btn-danger btn-sm btn-alert" data-file="'. $src->getId() .'" data-method="DELETE"><i class="fas fa-trash" aria-hidden="true"></i> Delete</a>
+                    </div>
+
+                    <div class="detail">
+                        <span class="badge">'. $src->getMime() .'</span>
+
+                        <div class="icons">
+                            <i class="fas fa-clock" data-toggle="tooltip" data-placement="top" title="'. $src->getDate("created_at") .'"></i>
+
+                            <i class="fas fa-weight-hanging" data-toggle="tooltip" data-placement="top" title="'. $src->getSize() .'"></i>
+
+                            <i class="fas fa-file-signature" data-toggle="tooltip" data-placement="top" title="'. ($src->getDimensions() ?? "---") .'"></i>
+
+                            <i class="fas fa-images" data-toggle="tooltip" data-placement="top" title="'. ($src->getAlt() ?? "---") .'"></i>
+                        </div>
+                    </div>
+                </div>		  				
+            </div>';
 
 		return $field ;
 	}

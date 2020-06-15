@@ -2,6 +2,7 @@
 
 namespace Workhouse\Helpers\Controllers;
 
+use Carbon\Carbon;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Arr;
 use Illuminate\Support\HtmlString;
@@ -460,15 +461,20 @@ class DataTable {
 
 			$dates = explode(' to ', $value);
 
+			$datesFrom = Carbon::createFromFormat('d/m/y H:i:s', $dates[0] . ' 00:00:00')->toDateTimeString();
+			$datesTo = Carbon::createFromFormat('d/m/y H:i:s', $dates[1] . ' 23:59:59')->toDateTimeString();
+
+			$dates = [$datesFrom, $datesTo];
+
 			if($isRelationship){
 
-				/*$this->query->whereHas($field, function($query) use ($field, $dates) {
-					$query->whereBetween($field, [$dates[0] . ' 00:00:00', $dates[1] . ' 23:59:59']);
-				});*/
+				$this->query = $this->query->whereHas($field, function($query) use ($field, $dates) {
+					$query->whereBetween($field, $dates);
+				});
 
 			} else {
 
-				$this->query->whereBetween($field, [$dates[0] . ' 00:00:00', $dates[1] . ' 23:59:59']);
+				$this->query = $this->query->whereBetween($field, $dates);
 			}
 		}
 
