@@ -23,6 +23,7 @@ class Modal extends Component
 	public $hideCancelBtn;
 	public $buttons;
 	public $resultSlot;
+	public $class;
 
 	/**
      * Create a new component instance.
@@ -30,15 +31,16 @@ class Modal extends Component
      * @return void
      */
 
-	public function __construct($title, $result, $hideHeader = false, $hideDismissBtn = false, $hideCancelBtn = false, $buttons = [], $resultSlot = null)
+	public function __construct($title, $result = false, $hideHeader = false, $hideDismissBtn = false, $hideCancelBtn = false, $buttons = [], $resultSlot = null, $class = '')
     {
-        $this->title = $title;
+    	$this->title = $title;
         $this->result = $result;
         $this->hideHeader = $hideHeader;
         $this->hideDismissBtn = $hideDismissBtn;
         $this->hideCancelBtn = $hideCancelBtn;
         $this->buttons = $buttons;
         $this->resultSlot = $resultSlot;
+        $this->class = $class;
     }
 
     /**

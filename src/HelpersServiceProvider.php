@@ -13,6 +13,8 @@ use Workhouse\Helpers\Controllers\Fields;
 use Workhouse\Helpers\Controllers\Row;
 use Workhouse\Helpers\View\Components\Modal;
 
+
+
 /**
  * Class HelpersServiceProvider
  * @package Workhouse\Helpers
@@ -42,7 +44,6 @@ class HelpersServiceProvider extends ServiceProvider {
 	 */
 
 	public function boot(){
-
 
 		Blade::component('modal', Modal::class);
 
