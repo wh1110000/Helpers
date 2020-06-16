@@ -92,7 +92,7 @@ if (! function_exists('formatSizeUnits')) {
 
 			$result = [
 				'number' => $bytes,
-				'unit' => \Doctrine\Common\Inflector\Inflector::pluralize('byte', $bytes)
+				'unit' => \Doctrine\Inflector\InflectorFactory::create()->build()->pluralize('byte', $bytes)
 			];
 		}
 
