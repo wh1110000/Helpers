@@ -183,7 +183,12 @@ class TemplateBuilder extends HtmlBuilder {
 	 * @return \Illuminate\Support\HtmlString
 	 */
 
-	public function bugherd(){
+	public function bugherd($disable = false, $showOnProduction = false){
+
+		if($disable == true || (App::environment(['production']) && $showOnProduction == false)){
+
+			return '';
+		}
 
 		$html = '<!--Bugherd-->';
 
@@ -253,5 +258,21 @@ class TemplateBuilder extends HtmlBuilder {
 	public function placeholder(){
 
 		return asset( 'images/noimage.jpg' );
+	}
+
+	/**
+	 * @return \Illuminate\Support\HtmlString
+	 */
+
+	public function logoutForm(){
+
+		$form = '';
+
+		if(auth()->check()){
+
+			$form =  $this->toHtmlString(\Form::open(['url' => route('logout') , 'method' => 'POST', 'id' => 'logout-form-user']).\Form::close(false));
+		}
+
+		return $this->toHtmlString($form);
 	}
 }

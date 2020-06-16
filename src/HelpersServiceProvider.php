@@ -11,6 +11,7 @@ use Workhouse\Helpers\Controllers\Button;
 use Workhouse\Helpers\Controllers\DataTable;
 use Workhouse\Helpers\Controllers\Fields;
 use Workhouse\Helpers\Controllers\Row;
+use Workhouse\Helpers\View\Components\Cookie;
 use Workhouse\Helpers\View\Components\Modal;
 
 
@@ -46,6 +47,7 @@ class HelpersServiceProvider extends ServiceProvider {
 	public function boot(){
 
 		Blade::component('modal', Modal::class);
+		Blade::component('cookie', Cookie::class);
 
 		$this->loadViews();
 
@@ -144,6 +146,7 @@ class HelpersServiceProvider extends ServiceProvider {
 
 		$this->loadViewsFrom(__DIR__.'/resources/views/DataTable', 'datatable');
 		$this->loadViewsFrom(__DIR__.'/resources/views/Modal', 'modal');
+		$this->loadViewsFrom(__DIR__.'/resources/views/Cookie', 'cookie');
 	}
 
 	/**

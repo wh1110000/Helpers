@@ -290,6 +290,20 @@ if(!function_exists('getLanguage')){
 	}
 }
 
+if(!function_exists('isLanguage')){
+
+	/**
+	 * @param $languageCode
+	 *
+	 * @return bool
+	 */
+
+	function isLanguage($languageCode){
+
+		return getLanguage('current')->getLanguageCode() == $languageCode;
+	}
+}
+
 if(!function_exists('camelToSnake')) {
 
 	/**
