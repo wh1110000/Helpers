@@ -2,7 +2,7 @@
 
 namespace Workhouse\Helpers;
 
-use Doctrine\Common\Inflector\Inflector;
+use Doctrine\Inflector\Inflector;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Workhouse\Cms\Services\Menu\Admin;
@@ -51,7 +51,7 @@ class HelpersServiceProvider extends ServiceProvider {
 
 		$this->loadViews();
 
-		Inflector::rules('singular', [
+		/*Inflector::rules('singular', [
 
 			'irregular' => array(
 				'media'      => 'media',
@@ -65,7 +65,7 @@ class HelpersServiceProvider extends ServiceProvider {
 				'media'      => 'media',
 				'medium'      => 'medium'
 			)
-		]);
+		]);*/
 	}
 
 	/**

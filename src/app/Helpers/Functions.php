@@ -152,7 +152,7 @@ if(!function_exists('specialCharsToSpaces')){
 
 	function specialCharsToSpaces($string){
 
-		$string = \Doctrine\Common\Inflector\Inflector::camelize($string);
+		$string = \Doctrine\Inflector\InflectorFactory::create()->build()->camelize($string);
 
 		preg_match_all('/((?:^|[A-Z])[a-z]+)/', $string, $matches);
 
