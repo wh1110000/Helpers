@@ -265,7 +265,7 @@ class FormBuilder extends \Collective\Html\FormBuilder {
 
 		if(optional($this->model)->getPostType() == 'contact'){
 
-			$appendage .= app('captcha')->render();
+			$appendage .= NoCaptcha::display();
 		}
 
 		return $appendage;

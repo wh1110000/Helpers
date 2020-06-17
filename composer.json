@@ -38,7 +38,8 @@
             "providers": [
                 "Workhouse\\Helpers\\HelpersServiceProvider",
                 "Workhouse\\Helpers\\HtmlServiceProvider",
-                "Workhouse\\Helpers\\SweetAlertServiceProvider"
+                "Workhouse\\Helpers\\SweetAlertServiceProvider",
+                "Anhskohbo\\NoCaptcha\\NoCaptchaServiceProvider"
             ],
             "aliases": {
                 "Button": "Workhouse\\Helpers\\Facades\\Button",
@@ -47,7 +48,8 @@
                 "Nav": "Workhouse\\Helpers\\Facades\\Nav",
                 "Row": "Workhouse\\Helpers\\Facades\\Row",
                 "Form": "Workhouse\\Helpers\\Facades\\Form",
-                "Html": "Workhouse\\Helpers\\Facades\\Html"
+                "Html": "Workhouse\\Helpers\\Facades\\Html",
+                "NoCaptcha" : "Anhskohbo\\NoCaptcha\\Facades\\NoCaptcha",
             },
             "dont-discover": [
                 "laravelcollective/html"
