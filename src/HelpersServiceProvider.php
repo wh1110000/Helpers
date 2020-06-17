@@ -13,6 +13,19 @@ use Workhouse\Helpers\Controllers\Fields;
 use Workhouse\Helpers\Controllers\Row;
 use Workhouse\Helpers\View\Components\Cookie;
 use Workhouse\Helpers\View\Components\Modal;
+use Doctrine\Inflector\CachedWordInflector;
+use Doctrine\Inflector\RulesetInflector;
+use Doctrine\Inflector\Rules\English;
+
+use Doctrine\Inflector\InflectorFactory;
+use Doctrine\Inflector\Rules\Pattern;
+use Doctrine\Inflector\Rules\Patterns;
+use Doctrine\Inflector\Rules\Ruleset;
+use Doctrine\Inflector\Rules\Substitution;
+use Doctrine\Inflector\Rules\Substitutions;
+use Doctrine\Inflector\Rules\Transformation;
+use Doctrine\Inflector\Rules\Transformations;
+use Doctrine\Inflector\Rules\Word;
 
 
 
@@ -38,6 +51,10 @@ class HelpersServiceProvider extends ServiceProvider {
 		$this->registerButton();
 
 		$this->registerNav();
+
+		$this->registerInflector();
+
+
 	}
 
 	/**
@@ -50,6 +67,26 @@ class HelpersServiceProvider extends ServiceProvider {
 		Blade::component('cookie', Cookie::class);
 
 		$this->loadViews();
+
+		/*$inflector = InflectorFactory::create()
+			->withSingularRules(
+                 new Ruleset(
+                     new Transformations(),
+                     new Patterns(),
+                     new Substitutions(new Su.bstitution(new Word('media'), new Word('media')))
+                 )
+			)
+			->withPluralRules(
+				new Ruleset(
+                     new Transformations(),
+                     new Patterns(),
+                     new Substitutions(
+                         new Substitution(new Word('media'), new Word('media'))
+                     )
+                 )
+             )
+             ->build();*/
+
 
 		/*Inflector::rules('singular', [
 
@@ -136,6 +173,35 @@ class HelpersServiceProvider extends ServiceProvider {
 			}
 
 		});
+	}
+
+	public function registerInflector(){
+
+		$this->app->bind('DoctrineInflector', function() {
+
+			return InflectorFactory::create()
+			                ->withSingularRules(
+				                new Ruleset(
+					                new Transformations(),
+					                new Patterns(),
+					                new Substitutions(
+						                new Substitution( new Word( 'media' ), new Word( 'Media' ) )
+					                )
+				                )
+			                )
+			                ->withPluralRules(
+				                new Ruleset(
+					                new Transformations(),
+					                new Patterns(),
+					                new Substitutions(
+						                new Substitution( new Word( 'media' ), new Word( 'media' ) )
+					                )
+				                )
+			                )
+			                ->build();
+			});
+
+
 	}
 
 	/**
