@@ -160,7 +160,7 @@ class FormBuilder extends \Collective\Html\FormBuilder {
 
 					foreach($col->getSections() as $section) {
 
-						$html->push('<section class="mb-5">');
+						$html->push('<section>');
 
 						if($section->getName()){
 
