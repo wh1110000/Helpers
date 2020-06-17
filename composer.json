@@ -49,7 +49,7 @@
                 "Row": "Workhouse\\Helpers\\Facades\\Row",
                 "Form": "Workhouse\\Helpers\\Facades\\Form",
                 "Html": "Workhouse\\Helpers\\Facades\\Html",
-                "NoCaptcha" : "Anhskohbo\\NoCaptcha\\Facades\\NoCaptcha",
+                "NoCaptcha": "Anhskohbo\\NoCaptcha\\Facades\\NoCaptcha"
             },
             "dont-discover": [
                 "laravelcollective/html"
