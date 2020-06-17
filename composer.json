@@ -27,7 +27,8 @@
         "spatie/laravel-menu" : "^3.5",
         "spatie/laravel-permission" : "3.11",
         "spatie/laravel-searchable": "^1.6",
-        "cviebrock/eloquent-sluggable" : "^7.0"
+        "cviebrock/eloquent-sluggable" : "^7.0",
+        "anhskohbo/no-captcha": "^3.2"
     },
     "required-dev": {
         "barryvdh/laravel-debugbar": "^3.2.4"
