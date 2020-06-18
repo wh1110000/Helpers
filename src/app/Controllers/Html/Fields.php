@@ -702,7 +702,8 @@ class Fields {
 			}
 		}
 
-		if(!$this->label && $this->placeholder === true){
+		//if(!$this->label && $this->placeholder === true){
+		if( !$this->label && $this->placeholder !== false && empty ($this->placeholder ) ){
 
 			$this->placeholder($this->name, false);
 		}
@@ -994,7 +995,7 @@ class Fields {
                 	<div class="buttons-sm">
                     	<a href="'. route("admin.media.edit.modal", $src) .'" class="btn btn-warning btn-sm active-modal"><i class="fas fa-edit" aria-hidden="true"></i> Edit</a>
 
-                        <a href="'. route("admin.media.delete", $src) .'" class="btn btn-danger btn-sm btn-alert" data-file="'. $src->getId() .'" data-method="DELETE"><i class="fas fa-trash" aria-hidden="true"></i> Delete</a>
+                        <a href="'. route("admin.media.delete", $src) .'" class="btn btn-danger btn-sm btn-alert" data-file="'. $src->getId() .'" data-method="DELETE" data-redirect="true"><i class="fas fa-trash" aria-hidden="true"></i> Delete</a>
                     </div>
 
                     <div class="detail">

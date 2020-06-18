@@ -2,7 +2,6 @@
 
 namespace Workhouse\Helpers;
 
-use Doctrine\Inflector\Inflector;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Workhouse\Cms\Services\Menu\Admin;
@@ -13,17 +12,11 @@ use Workhouse\Helpers\Controllers\Fields;
 use Workhouse\Helpers\Controllers\Row;
 use Workhouse\Helpers\View\Components\Cookie;
 use Workhouse\Helpers\View\Components\Modal;
-use Doctrine\Inflector\CachedWordInflector;
-use Doctrine\Inflector\RulesetInflector;
-use Doctrine\Inflector\Rules\English;
-
 use Doctrine\Inflector\InflectorFactory;
-use Doctrine\Inflector\Rules\Pattern;
 use Doctrine\Inflector\Rules\Patterns;
 use Doctrine\Inflector\Rules\Ruleset;
 use Doctrine\Inflector\Rules\Substitution;
 use Doctrine\Inflector\Rules\Substitutions;
-use Doctrine\Inflector\Rules\Transformation;
 use Doctrine\Inflector\Rules\Transformations;
 use Doctrine\Inflector\Rules\Word;
 

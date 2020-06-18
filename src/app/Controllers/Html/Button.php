@@ -2,6 +2,8 @@
 
 namespace Workhouse\Helpers\Controllers;
 
+use Illuminate\Contracts\Routing\UrlGenerator;
+use Illuminate\Contracts\View\Factory;
 use Illuminate\Support\HtmlString;
 
 /**
@@ -179,7 +181,10 @@ class Button extends HtmlBuilder {
 
 		$attributes['class'][] = 'btn';
 
-		$this->attributes = [];
+		if(!is_array($this->attributes)){
+
+			$this->attributes = [];
+		}
 
 		$_attributes = is_array($attributes) ? $attributes : (array) $attributes;
 
@@ -191,6 +196,8 @@ class Button extends HtmlBuilder {
 
 			$this->attributes = array_merge_recursive($_attributes, $this->attributes);
 		}
+
+		$this->attributes = array_filter($this->attributes);
 
 		return $this;
 	}
@@ -207,7 +214,7 @@ class Button extends HtmlBuilder {
 
 		$this->refresh();
 
-		return $toHtml && ($html instanceof HtmlString) ? $html->toHtml() : $html;
+		return  $toHtml && ($html instanceof HtmlString) ? $html->toHtml() : $html;
 	}
 
 	/**
@@ -308,6 +315,7 @@ class Button extends HtmlBuilder {
 
 	public function preDefinedButton($route, $label, $icon, $attributes, $visible, $render){
 
+
 		$this->visible($visible);
 
 		$this->route($route);
@@ -326,7 +334,6 @@ class Button extends HtmlBuilder {
 
 			} else {
 
-				$this->refresh();
 
 				return $this->toHtmlString('');
 			}
@@ -343,18 +350,21 @@ class Button extends HtmlBuilder {
 
 	public function refresh(){
 
-		$default = app('Button');
+		//$default = \Workhouse\Helpers\Facades\Button::init();
 
-		$this->label = $default->label;
+		$this->label = null;
 
-		$this->route = $default->route;
+		$this->route = null;
 
-		$this->icon = $default->icon;
+		$this->icon = null;
 
-		$this->class = $default->class;
+		$this->class = [];
 
-		$this->visible = $default->visible;
+		$this->visible = true;
 
-		$this->attributes = $default->attributes;
+		$this->attributes = [
+			'id' => '',
+			'class' => ['btn', 'mb-2']
+		];
 	}
 }
