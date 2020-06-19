@@ -28,7 +28,8 @@
         "spatie/laravel-permission" : "3.11",
         "spatie/laravel-searchable": "^1.6",
         "cviebrock/eloquent-sluggable" : "^7.0",
-        "albertcht/invisible-recaptcha": "^1.9"
+        "albertcht/invisible-recaptcha": "^1.9",
+        "binarytorch/larecipe": "^v2.3"
     },
     "required-dev": {
         "barryvdh/laravel-debugbar": "^3.2.4"
