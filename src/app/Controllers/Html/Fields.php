@@ -310,7 +310,7 @@ class Fields {
 
 		if($editor){
 
-			$this->attributes(['class' => ['editor']]);
+			$this->attributes(['class' => ['wysiwyg-editor']]);
 		}
 
 		$this->attributes[ 'rows' ] = 3;
