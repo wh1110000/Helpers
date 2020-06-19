@@ -332,4 +332,18 @@ if(!function_exists('camelToSnake')) {
 	}
 }
 
+if (! function_exists('textColour')) {
+
+	/**
+	 * @param $bgColour
+	 *
+	 * @return string
+	 */
+
+	function textColour($bgColour){
+
+		return hexdec($bgColour) > 0xffffff / 2 ? 'black' : 'white';
+	}
+}
+
 
