@@ -46,9 +46,15 @@ class HtmlBuilder extends TemplateBuilder {
 		}
 		///}
 
-		if(!$url && isset($attributes['placeholder']) && $attributes['placeholder'] == true){
+		if(!$url){
 
-			$url = \Html::placeholder();
+			if(isset($attributes['placeholder']) && $attributes['placeholder'] == true){
+
+				$url = \Html::placeholder();
+			} else {
+				 return $this->toHtmlString('');
+			}
+		
 		}
 
 		$attributes['class'] = $attributes['class'] ?? [];
