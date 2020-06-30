@@ -212,9 +212,17 @@ if(!function_exists('generateRoute')){
 
 				$route = route($page->getLink().'.index');
 
+			} else if(in_array(app('DoctrineInflector')->singularize($page->getLink()).'.index', $routes)){
+
+				$route = route(app('DoctrineInflector')->singularize($page->getLink()).'.index');
+
 			} else if(in_array($page->getLink().'.show', $routes)){
 
 				$route = route($page->getLink().'.show', $page);
+
+			} else if(in_array(app('DoctrineInflector')->singularize($page->getLink()).'.show', $routes)){
+
+				$route = route(app('DoctrineInflector')->singularize($page->getLink()).'.show', $page);
 
 			} elseif($page->getType() == 'internal') {
 
@@ -268,7 +276,9 @@ if(!function_exists('getCurrentLanguage')){
 
 	function getCurrentLanguage(){
 
-		return optional(model(getSetting('TRANSLATIONBY') == 'country' ? 'Country' : 'Language')->current()->first())->getCode();
+		$model = getSetting('TRANSLATIONBY') == 'country' ? 'Country' : 'Language';
+
+		return optional((new $model)->current()->first())->getCode();
 	}
 }
 

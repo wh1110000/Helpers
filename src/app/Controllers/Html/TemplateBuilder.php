@@ -257,7 +257,7 @@ class TemplateBuilder extends HtmlBuilder {
 
 	public function placeholder(){
 
-		return asset( 'images/noimage.jpg' );
+		return asset( 'images/noimage.png' );
 	}
 
 	/**
