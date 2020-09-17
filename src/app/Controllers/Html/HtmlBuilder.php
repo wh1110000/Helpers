@@ -24,7 +24,7 @@ class HtmlBuilder extends TemplateBuilder {
 
 	public function image($object, $alt = '', $attributes = [], $secure = null){
 
-		$instance = \Media::query();
+		$instance = new \Media();
 
 		if(($object instanceof $instance || $object instanceof Optional) && method_exists($instance, 'getFile')){
 
@@ -92,9 +92,10 @@ class HtmlBuilder extends TemplateBuilder {
 			return file_get_contents($url);
 		}
 
-    if(!isset($attributes['alt']) || is_null($attributes['alt']) && ($object instanceof $instance)){
-		    $attributes['alt'] = $object->getAlt();
-    }
+	    if((!isset($attributes['alt']) || is_null($attributes['alt'])) && ($object instanceof $instance)){
+
+			$attributes['alt'] = $object->getAlt();
+	    }
 		    
 		$img = $this->toHtmlString('<img src="' . $this->url->asset($url, $secure) . '"' . $this->attributes($attributes) . '>');
 
