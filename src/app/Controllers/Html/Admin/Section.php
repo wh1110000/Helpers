@@ -89,7 +89,7 @@ class Section {
 	public function addField($field, $label = null) {
 
 		if($this->visible){
-
+		    
 			if(is_array($field)){
 
 				$this->inputGroup = true;
@@ -100,9 +100,14 @@ class Section {
 
 			if($field instanceof HtmlString){
 
+				$_field = $field;
 				$field = $field->toHtml();
 			}
-
+			
+		//	if($field != '<div><label for="short_description" class="">Short Description</label><textarea class="form-control" rows="3" placeholder name="short_description" cols="50" id="short_description"></textarea></div>' && $field!='<div><label for="excerpt" class="">Excerpt</label><textarea class="form-control" rows="3" placeholder name="excerpt" cols="50" id="excerpt"></textarea></div>' && $field != '<div><label for="title" class="required">Title</label><input class="form-control" placeholder name="title" type="text" value="Terms and Conditions" id="title"></div>')
+	//	  dd($_field);
+			
+			
 			$this->fields->push($field);
 		}
 
@@ -119,9 +124,9 @@ class Section {
 	public function groupFields($fields, $label){
 
 		$col = '';
-
+		
 		foreach (array_filter($fields) as $field){
-
+		    
 			$col .= preg_replace('/<div>/', '<div class="col">', $field->toHtml(), 1);
 		}
 

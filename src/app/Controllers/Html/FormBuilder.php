@@ -89,7 +89,7 @@ class FormBuilder extends \Collective\Html\FormBuilder {
 
 			$content = \Html::tag('div', $content->implode(''), ['class' => 'tab-content', 'id' => 'myTabContent']);
 
-			$rendered = Str::finish($nav, $content);
+			$rendered = $nav . $content;
 
 		} else {
 
@@ -246,7 +246,8 @@ class FormBuilder extends \Collective\Html\FormBuilder {
 			request()->session()->forget('errors');
 
 		} elseif($submitBtn !== false){
-
+		    
+		
 			return $this->toHtmlString($this->submit(is_string($submitBtn) ? $submitBtn : null).'</form>');
 		}
 
@@ -294,9 +295,9 @@ class FormBuilder extends \Collective\Html\FormBuilder {
 			$value = __('contact::general.submit');
 		}
 
-		//$options['type'] = 'submit';
-
-		return parent::submit($value ?: __('cms::general.save'), array_filter($options));
+		$options['type'] = 'submit';
+		
+		//return parent::submit($value ?: __('cms::general.save'), array_filter($options));
 		return parent::button($value ?: __('cms::general.save'), array_filter($options));
 	}
 

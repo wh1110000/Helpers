@@ -4,6 +4,7 @@ namespace Workhouse\Helpers\Controllers;
 
 use function GuzzleHttp\Psr7\mimetype_from_filename;
 use Illuminate\Support\Optional;
+use Illuminate\Support\Str;
 
 /**
  * Class HtmlBuilder
@@ -41,6 +42,8 @@ class HtmlBuilder extends TemplateBuilder {
 		} else {
 
 			$url = $object;
+			
+			$object = $instance->where('filename', Str::afterLast($url, '/'))->first();
 
 			$attributes['alt'] = $alt;
 		}
@@ -89,6 +92,10 @@ class HtmlBuilder extends TemplateBuilder {
 			return file_get_contents($url);
 		}
 
+    if(!isset($attributes['alt']) || is_null($attributes['alt']) && ($object instanceof $instance)){
+		    $attributes['alt'] = $object->getAlt();
+    }
+		    
 		$img = $this->toHtmlString('<img src="' . $this->url->asset($url, $secure) . '"' . $this->attributes($attributes) . '>');
 
 		if($isPopup) {

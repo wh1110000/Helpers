@@ -120,7 +120,7 @@ class Col {
 	public function groupFields($fields, $label){
 
 		$col = '';
-
+		
 		foreach (array_filter($fields) as $field){
 
 			$col .= preg_replace('/<div>/', '<div class="col">', $field->toHtml(), 1);
