@@ -1,6 +1,6 @@
 <?php
 
-namespace wh1110000\helpers\Controllers\Html;
+namespace wh1110000\Helpers\Controllers\Html;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\HtmlString;

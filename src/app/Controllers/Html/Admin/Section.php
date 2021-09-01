@@ -1,6 +1,6 @@
 <?php
 
-namespace wh1110000\helpers\Controllers\Html\Admin;
+namespace wh1110000\Helpers\Controllers\Html\Admin;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
