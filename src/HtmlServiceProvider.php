@@ -3,8 +3,8 @@
 namespace wh1110000\Helpers;
 
 use Illuminate\Support\ServiceProvider;
-use wh1110000\Helpers\Controllers\FormBuilder;
-use wh1110000\Helpers\Controllers\HtmlBuilder;
+use wh1110000\Helpers\Controllers\Html\FormBuilder;
+use wh1110000\Helpers\Controllers\Html\HtmlBuilder;
 
 /**
  * Class HtmlServiceProvider
