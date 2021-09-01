@@ -1,5 +1,5 @@
 {
-    "name": "wh1110000/helpers",
+    "name": "wh1110000/Helpers",
     "description": "Helpers",
     "type": "library",
     "license": "MIT",
@@ -11,10 +11,10 @@
     ],
     "autoload": {
         "files": [
-            "src\\app\\helpers\\Functions.php"
+            "src\\Helpers\\Functions.php"
         ],
         "psr-4": {
-            "wh1110000\\helpers\\": "src/"
+            "wh1110000\\Helpers\\": "src/"
         }
     },
     "require": {
@@ -37,19 +37,19 @@
     "extra": {
         "laravel": {
             "providers": [
-                "wh1110000\\helpers\\HelpersServiceProvider",
-                "wh1110000\\helpers\\HtmlServiceProvider",
-                "wh1110000\\helpers\\SweetAlertServiceProvider",
+                "wh1110000\\Helpers\\HelpersServiceProvider",
+                "wh1110000\\Helpers\\HtmlServiceProvider",
+                "wh1110000\\Helpers\\SweetAlertServiceProvider",
                 "AlbertCht\\InvisibleReCaptcha\\InvisibleReCaptchaServiceProvider"
             ],
             "aliases": {
-                "Button": "wh1110000\\helpers\\Facades\\Button",
-                "DataTable": "wh1110000\\helpers\\Facades\\DataTable",
-                "Fields": "wh1110000\\helpers\\Facades\\Fields",
-                "Nav": "wh1110000\\helpers\\Facades\\Nav",
-                "Row": "wh1110000\\helpers\\Facades\\Row",
-                "Form": "wh1110000\\helpers\\Facades\\Form",
-                "Html": "wh1110000\\helpers\\Facades\\Html"
+                "Button": "wh1110000\\Helpers\\Facades\\Button",
+                "DataTable": "wh1110000\\Helpers\\Facades\\DataTable",
+                "Fields": "wh1110000\\Helpers\\Facades\\Fields",
+                "Nav": "wh1110000\\Helpers\\Facades\\Nav",
+                "Row": "wh1110000\\Helpers\\Facades\\Row",
+                "Form": "wh1110000\\Helpers\\Facades\\Form",
+                "Html": "wh1110000\\Helpers\\Facades\\Html"
             },
             "dont-discover": [
                 "laravelcollective/html"
