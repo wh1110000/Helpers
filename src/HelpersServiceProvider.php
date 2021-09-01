@@ -1,17 +1,17 @@
 <?php
 
-namespace Workhouse\Helpers;
+namespace wh1110000\helpers;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
-use Workhouse\Cms\Services\Menu\Admin;
-use Workhouse\Cms\Services\Menu\Website;
-use Workhouse\Helpers\Controllers\Button;
-use Workhouse\Helpers\Controllers\DataTable;
-use Workhouse\Helpers\Controllers\Fields;
-use Workhouse\Helpers\Controllers\Row;
-use Workhouse\Helpers\View\Components\Cookie;
-use Workhouse\Helpers\View\Components\Modal;
+use wh1110000\Workhouse\Services\Menu\Admin;
+use wh1110000\Workhouse\Services\Menu\Website;
+use wh1110000\helpers\Controllers\Button;
+use wh1110000\helpers\Controllers\DataTable;
+use wh1110000\helpers\Controllers\Fields;
+use wh1110000\helpers\Controllers\Row;
+use wh1110000\helpers\View\Components\Cookie;
+use wh1110000\helpers\View\Components\Modal;
 use Doctrine\Inflector\InflectorFactory;
 use Doctrine\Inflector\Rules\Patterns;
 use Doctrine\Inflector\Rules\Ruleset;

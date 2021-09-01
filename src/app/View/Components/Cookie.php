@@ -1,6 +1,6 @@
 <?php
 
-namespace Workhouse\Helpers\View\Components;
+namespace wh1110000\helpers\View\Components;
 
 use Illuminate\View\Component;
 

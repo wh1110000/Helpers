@@ -1,5 +1,5 @@
 {
-    "name": "111-0000/helpers",
+    "name": "wh1110000/helpers",
     "description": "Helpers",
     "type": "library",
     "license": "MIT",
@@ -11,10 +11,10 @@
     ],
     "autoload": {
         "files": [
-            "src\\app\\Helpers\\Functions.php"
+            "src\\app\\helpers\\Functions.php"
         ],
         "psr-4": {
-            "Workhouse\\Helpers\\": "src/"
+            "wh1110000\\helpers\\": "src/"
         }
     },
     "require": {
@@ -37,19 +37,19 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Workhouse\\Helpers\\HelpersServiceProvider",
-                "Workhouse\\Helpers\\HtmlServiceProvider",
-                "Workhouse\\Helpers\\SweetAlertServiceProvider",
+                "wh1110000\\helpers\\HelpersServiceProvider",
+                "wh1110000\\helpers\\HtmlServiceProvider",
+                "wh1110000\\helpers\\SweetAlertServiceProvider",
                 "AlbertCht\\InvisibleReCaptcha\\InvisibleReCaptchaServiceProvider"
             ],
             "aliases": {
-                "Button": "Workhouse\\Helpers\\Facades\\Button",
-                "DataTable": "Workhouse\\Helpers\\Facades\\DataTable",
-                "Fields": "Workhouse\\Helpers\\Facades\\Fields",
-                "Nav": "Workhouse\\Helpers\\Facades\\Nav",
-                "Row": "Workhouse\\Helpers\\Facades\\Row",
-                "Form": "Workhouse\\Helpers\\Facades\\Form",
-                "Html": "Workhouse\\Helpers\\Facades\\Html"
+                "Button": "wh1110000\\helpers\\Facades\\Button",
+                "DataTable": "wh1110000\\helpers\\Facades\\DataTable",
+                "Fields": "wh1110000\\helpers\\Facades\\Fields",
+                "Nav": "wh1110000\\helpers\\Facades\\Nav",
+                "Row": "wh1110000\\helpers\\Facades\\Row",
+                "Form": "wh1110000\\helpers\\Facades\\Form",
+                "Html": "wh1110000\\helpers\\Facades\\Html"
             },
             "dont-discover": [
                 "laravelcollective/html"

@@ -1,6 +1,6 @@
 <?php
 
-namespace Workhouse\Helpers\Controllers;
+namespace wh1110000\helpers\Controllers\Html;
 
 use function GuzzleHttp\Psr7\mimetype_from_filename;
 use Illuminate\Support\Optional;

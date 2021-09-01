@@ -1,11 +1,11 @@
 <?php
 
-namespace Workhouse\Helpers\Controllers;
+namespace wh1110000\helpers\Controllers\Html;
 
 use Illuminate\Support\HtmlString;
 use Illuminate\Support\Str;
 use Illuminate\Support\ViewErrorBag;
-use Workhouse\Cms\Presenters\Media;
+use wh1110000\Workhouse\Presenters\Media;
 
 /**
  * Class Fields

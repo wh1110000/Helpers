@@ -1,11 +1,11 @@
 <?php
 
-namespace Workhouse\Helpers\Controllers;
+namespace wh1110000\helpers\Controllers\Html;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\HtmlString;
 use Illuminate\Support\Str;
-use Workhouse\Cms\Models\Lang;
+use wh1110000\Workhouse\Models\Lang;
 
 /**
  * Class FormBuilder

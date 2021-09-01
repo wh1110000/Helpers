@@ -1,6 +1,6 @@
 <?php
 
-namespace Workhouse\Helpers\Controllers;
+namespace wh1110000\Helpers\Controllers\DataTable;
 
 use Carbon\Carbon;
 use Illuminate\Contracts\Support\Arrayable;
