@@ -276,9 +276,7 @@ if(!function_exists('getCurrentLanguage')){
 
 	function getCurrentLanguage(){
 
-		$model = getSetting('TRANSLATIONBY') == 'country' ? 'Country' : 'Language';
-
-		return optional((new $model)->current()->first())->getCode();
+		return optional(model(getSetting('TRANSLATIONBY') == 'country' ? 'Country' : 'Language')->current()->first())->getCode();
 	}
 }
 

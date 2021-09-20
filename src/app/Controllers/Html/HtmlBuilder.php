@@ -1,10 +1,9 @@
 <?php
 
-namespace wh1110000\Helpers\Controllers\Html;
+namespace Workhouse\Helpers\Controllers;
 
 use function GuzzleHttp\Psr7\mimetype_from_filename;
 use Illuminate\Support\Optional;
-use Illuminate\Support\Str;
 
 /**
  * Class HtmlBuilder
@@ -31,7 +30,7 @@ class HtmlBuilder extends TemplateBuilder {
 			if($object->fileExists()){
 
 				$url = $object->getFile();
-
+				
 				$attributes['alt'] = $alt ?: $object->getAlt();
 
 			} else {
@@ -43,9 +42,12 @@ class HtmlBuilder extends TemplateBuilder {
 
 			$url = $object;
 			
-			$object = $instance->where('filename', Str::afterLast($url, '/'))->first();
-
-			$attributes['alt'] = $alt;
+			$object = $instance->where('filename', \Illuminate\Support\Str::afterLast($url, '/'))->first();
+            
+            if($alt){
+                
+			    $attributes['alt'] = $alt;
+            }
 		}
 		///}
 
@@ -54,7 +56,9 @@ class HtmlBuilder extends TemplateBuilder {
 			if(isset($attributes['placeholder']) && $attributes['placeholder'] == true){
 
 				$url = \Html::placeholder();
+				
 			} else {
+			    
 				 return $this->toHtmlString('');
 			}
 		
@@ -92,10 +96,9 @@ class HtmlBuilder extends TemplateBuilder {
 			return file_get_contents($url);
 		}
 
-	    if((!isset($attributes['alt']) || is_null($attributes['alt'])) && ($object instanceof $instance)){
-
-			$attributes['alt'] = $object->getAlt();
-	    }
+        if((!isset($attributes['alt']) || is_null($attributes['alt'])) && ($object instanceof $instance)){
+            $attributes['alt'] = optional($object)->getAlt();
+        }
 		    
 		$img = $this->toHtmlString('<img src="' . $this->url->asset($url, $secure) . '"' . $this->attributes($attributes) . '>');
 

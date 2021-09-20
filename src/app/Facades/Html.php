@@ -1,6 +1,6 @@
 <?php
 
-namespace wh1110000\Helpers\Facades;
+namespace Workhouse\Helpers\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

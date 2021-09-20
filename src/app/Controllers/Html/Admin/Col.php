@@ -1,6 +1,6 @@
 <?php
 
-namespace wh1110000\Helpers\Controllers\Html\Admin;
+namespace Workhouse\Helpers\Controllers;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\HtmlString;
@@ -120,7 +120,7 @@ class Col {
 	public function groupFields($fields, $label){
 
 		$col = '';
-		
+
 		foreach (array_filter($fields) as $field){
 
 			$col .= preg_replace('/<div>/', '<div class="col">', $field->toHtml(), 1);

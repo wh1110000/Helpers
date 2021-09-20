@@ -1,6 +1,6 @@
 <?php
 
-namespace wh1110000\Helpers\Controllers\Html;
+namespace Workhouse\Helpers\Controllers;
 
 use Collective\Html\HtmlBuilder;
 use Favicon\FaviconHtmlGenerator;
@@ -257,7 +257,7 @@ class TemplateBuilder extends HtmlBuilder {
 
 	public function placeholder(){
 
-		return asset( 'images/noimage.png' );
+		return asset( 'images/noimage.jpg' );
 	}
 
 	/**

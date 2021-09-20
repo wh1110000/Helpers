@@ -1,6 +1,6 @@
 <?php
 
-namespace wh1110000\Helpers;
+namespace Workhouse\Helpers;
 
 use RealRashid\SweetAlert\ToSweetAlert;
 

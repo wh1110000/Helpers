@@ -1,6 +1,6 @@
 <?php
 
-namespace wh1110000\Helpers\Controllers\Html;
+namespace Workhouse\Helpers\Controllers;
 
 use Illuminate\Contracts\Routing\UrlGenerator;
 use Illuminate\Contracts\View\Factory;

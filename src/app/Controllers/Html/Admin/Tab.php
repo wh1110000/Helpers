@@ -1,6 +1,6 @@
 <?php
 
-namespace wh1110000\Helpers\Controllers\Html\Admin;
+namespace Workhouse\Helpers\Controllers;
 
 use Illuminate\Support\Collection;
 
