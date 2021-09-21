@@ -37,9 +37,9 @@
     "extra": {
         "laravel": {
             "providers": [
-                "workhouse\\helpers\\HelpersServiceProvider",
-                "workhouse\\helpers\\HtmlServiceProvider",
-                "workhouse\\helpers\\SweetAlertServiceProvider",
+                "workhouse\\helpers\\Providers\\HelpersServiceProvider",
+                "workhouse\\helpers\\Providers\\HtmlServiceProvider",
+                "workhouse\\helpers\\Providers\\SweetAlertServiceProvider",
                 "AlbertCht\\InvisibleReCaptcha\\InvisibleReCaptchaServiceProvider"
             ],
             "aliases": {
