@@ -1,5 +1,5 @@
 {
-    "name": "111-0000/helpers",
+    "name": "workhouse/helpers",
     "description": "Helpers",
     "type": "library",
     "license": "MIT",
@@ -14,7 +14,7 @@
             "src\\app\\Helpers\\Functions.php"
         ],
         "psr-4": {
-            "Workhouse\\Helpers\\": "src/"
+            "workhouse\\helpers\\": "src/"
         }
     },
     "require": {
