@@ -14,7 +14,7 @@
             "src\\app\\Helpers\\Functions.php"
         ],
         "psr-4": {
-            "workhouse\\helpers\\": "src/"
+            "workhouse\\helpers\\": "src/app/"
         }
     },
     "require": {
