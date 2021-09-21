@@ -1,15 +1,15 @@
 <?php
 
-namespace Workhouse\Helpers\Controllers;
+namespace workhouse\helpers\Controllers;
 
 use Illuminate\Support\HtmlString;
 use Illuminate\Support\Str;
 use Illuminate\Support\ViewErrorBag;
-use Workhouse\Cms\Presenters\Media;
+use workhouse\cms\Presenters\Media;
 
 /**
  * Class Fields
- * @package Workhouse\Cms\Helpers
+ * @package workhouse\cms\Helpers
  */
 
 class Fields {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Workhouse\Helpers\Controllers;
+namespace workhouse\helpers\Controllers;
 
 use Collective\Html\HtmlBuilder;
 use Favicon\FaviconHtmlGenerator;
@@ -9,7 +9,7 @@ use Illuminate\Support\Str;
 
 /**
  * Class TemplateBuilder
- * @package Workhouse\Cms\Helpers
+ * @package workhouse\cms\Helpers
  */
 
 class TemplateBuilder extends HtmlBuilder {

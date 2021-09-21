@@ -1,13 +1,13 @@
 <?php
 
-namespace Workhouse\Helpers\Controllers;
+namespace workhouse\helpers\Controllers;
 
 use function GuzzleHttp\Psr7\mimetype_from_filename;
 use Illuminate\Support\Optional;
 
 /**
  * Class HtmlBuilder
- * @package Workhouse\Cms\Helpers
+ * @package workhouse\cms\Helpers
  */
 
 class HtmlBuilder extends TemplateBuilder {

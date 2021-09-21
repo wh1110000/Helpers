@@ -37,19 +37,19 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Workhouse\\Helpers\\HelpersServiceProvider",
-                "Workhouse\\Helpers\\HtmlServiceProvider",
-                "Workhouse\\Helpers\\SweetAlertServiceProvider",
+                "workhouse\\helpers\\HelpersServiceProvider",
+                "workhouse\\helpers\\HtmlServiceProvider",
+                "workhouse\\helpers\\SweetAlertServiceProvider",
                 "AlbertCht\\InvisibleReCaptcha\\InvisibleReCaptchaServiceProvider"
             ],
             "aliases": {
-                "Button": "Workhouse\\Helpers\\Facades\\Button",
-                "DataTable": "Workhouse\\Helpers\\Facades\\DataTable",
-                "Fields": "Workhouse\\Helpers\\Facades\\Fields",
-                "Nav": "Workhouse\\Helpers\\Facades\\Nav",
-                "Row": "Workhouse\\Helpers\\Facades\\Row",
-                "Form": "Workhouse\\Helpers\\Facades\\Form",
-                "Html": "Workhouse\\Helpers\\Facades\\Html"
+                "Button": "workhouse\\helpers\\Facades\\Button",
+                "DataTable": "workhouse\\helpers\\Facades\\DataTable",
+                "Fields": "workhouse\\helpers\\Facades\\Fields",
+                "Nav": "workhouse\\helpers\\Facades\\Nav",
+                "Row": "workhouse\\helpers\\Facades\\Row",
+                "Form": "workhouse\\helpers\\Facades\\Form",
+                "Html": "workhouse\\helpers\\Facades\\Html"
             },
             "dont-discover": [
                 "laravelcollective/html"

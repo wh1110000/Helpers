@@ -191,12 +191,12 @@ if(!function_exists('generateRoute')) {
 if(!function_exists('generateRoute')){
 
 	/**
-	 * @param \Workhouse\Cms\Models\Page $page
+	 * @param \workhouse\cms\Models\Page $page
 	 *
 	 * @return null|string
 	 */
 
-	function generateRoute(\Workhouse\Cms\Models\Page $page){
+	function generateRoute(\workhouse\cms\Models\Page $page){
 
 		$routes = getRoutes();
 

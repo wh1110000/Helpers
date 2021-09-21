@@ -1,12 +1,12 @@
 <?php
 
-namespace Workhouse\Helpers\Controllers;
+namespace workhouse\helpers\Controllers;
 
 use Illuminate\Support\Collection;
 
 /**
  * Class Row
- * @package Workhouse\Cms\Helpers
+ * @package workhouse\cms\Helpers
  */
 
 class Row {

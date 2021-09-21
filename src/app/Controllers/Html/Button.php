@@ -1,6 +1,6 @@
 <?php
 
-namespace Workhouse\Helpers\Controllers;
+namespace workhouse\helpers\Controllers;
 
 use Illuminate\Contracts\Routing\UrlGenerator;
 use Illuminate\Contracts\View\Factory;
@@ -8,7 +8,7 @@ use Illuminate\Support\HtmlString;
 
 /**
  * Class Button
- * @package Workhouse\Cms\Helpers
+ * @package workhouse\cms\Helpers
  */
 
 class Button extends HtmlBuilder {
@@ -350,7 +350,7 @@ class Button extends HtmlBuilder {
 
 	public function refresh(){
 
-		//$default = \Workhouse\Helpers\Facades\Button::init();
+		//$default = \workhouse\helpers\Facades\Button::init();
 
 		$this->label = null;
 

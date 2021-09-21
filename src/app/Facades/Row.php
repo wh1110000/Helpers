@@ -1,12 +1,12 @@
 <?php
 
-namespace Workhouse\Helpers\Facades;
+namespace workhouse\helpers\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
  * Class Row
- * @package Workhouse\Cms\Facades
+ * @package workhouse\cms\Facades
  */
 
 class Row extends Facade {

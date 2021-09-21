@@ -1,17 +1,17 @@
 <?php
 
-namespace Workhouse\Helpers;
+namespace workhouse\helpers;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
-use Workhouse\Cms\Services\Menu\Admin;
-use Workhouse\Cms\Services\Menu\Website;
-use Workhouse\Helpers\Controllers\Button;
-use Workhouse\Helpers\Controllers\DataTable;
-use Workhouse\Helpers\Controllers\Fields;
-use Workhouse\Helpers\Controllers\Row;
-use Workhouse\Helpers\View\Components\Cookie;
-use Workhouse\Helpers\View\Components\Modal;
+use workhouse\cms\Services\Menu\Admin;
+use workhouse\cms\Services\Menu\Website;
+use workhouse\helpers\Controllers\Button;
+use workhouse\helpers\Controllers\DataTable;
+use workhouse\helpers\Controllers\Fields;
+use workhouse\helpers\Controllers\Row;
+use workhouse\helpers\View\Components\Cookie;
+use workhouse\helpers\View\Components\Modal;
 use Doctrine\Inflector\InflectorFactory;
 use Doctrine\Inflector\Rules\Patterns;
 use Doctrine\Inflector\Rules\Ruleset;
@@ -24,7 +24,7 @@ use Doctrine\Inflector\Rules\Word;
 
 /**
  * Class HelpersServiceProvider
- * @package Workhouse\Helpers
+ * @package workhouse\helpers
  */
 
 class HelpersServiceProvider extends ServiceProvider {

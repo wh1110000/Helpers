@@ -1,15 +1,15 @@
 <?php
 
-namespace Workhouse\Helpers\Controllers;
+namespace workhouse\helpers\Controllers;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\HtmlString;
 use Illuminate\Support\Str;
-use Workhouse\Cms\Models\Lang;
+use workhouse\cms\Models\Lang;
 
 /**
  * Class FormBuilder
- * @package Workhouse\Cms\Helpers
+ * @package workhouse\cms\Helpers
  */
 
 class FormBuilder extends \Collective\Html\FormBuilder {

@@ -1,12 +1,12 @@
 <?php
 
-namespace Workhouse\Helpers;
+namespace workhouse\helpers;
 
 use RealRashid\SweetAlert\ToSweetAlert;
 
 /**
  * Class HtmlServiceProvider
- * @package Workhouse\Helpers
+ * @package workhouse\helpers
  */
 
 class SweetAlertServiceProvider extends \RealRashid\SweetAlert\SweetAlertServiceProvider {

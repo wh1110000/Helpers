@@ -1,6 +1,6 @@
 <?php
 
-namespace Workhouse\Helpers\Controllers;
+namespace workhouse\helpers\Controllers;
 
 use Carbon\Carbon;
 use Illuminate\Contracts\Support\Arrayable;
@@ -10,7 +10,7 @@ use Illuminate\Support\Str;
 
 /**
  * Class DataTable
- * @package Workhouse\Cms\Helpers
+ * @package workhouse\cms\Helpers
  */
 
 class DataTable {

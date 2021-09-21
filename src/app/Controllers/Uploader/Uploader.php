@@ -1,12 +1,12 @@
 <?php
 
-namespace Workhouse\Helpers\Controllers\Uploader;
+namespace workhouse\helpers\Controllers\Uploader;
 
 use Illuminate\Support\Facades\Storage;
 
 /**
  * Class Uploader
- * @package Workhouse\Cms\Helpers
+ * @package workhouse\cms\Helpers
  */
 
 class Uploader {

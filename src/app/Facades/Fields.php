@@ -1,12 +1,12 @@
 <?php
 
-namespace Workhouse\Helpers\Facades;
+namespace workhouse\helpers\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
  * Class Fields
- * @package Workhouse\Cms\Facades
+ * @package workhouse\cms\Facades
  */
 
 class Fields extends Facade {

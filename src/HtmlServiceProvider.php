@@ -1,14 +1,14 @@
 <?php
 
-namespace Workhouse\Helpers;
+namespace workhouse\helpers;
 
 use Illuminate\Support\ServiceProvider;
-use Workhouse\Helpers\Controllers\FormBuilder;
-use Workhouse\Helpers\Controllers\HtmlBuilder;
+use workhouse\helpers\Controllers\FormBuilder;
+use workhouse\helpers\Controllers\HtmlBuilder;
 
 /**
  * Class HtmlServiceProvider
- * @package Workhouse\Helpers
+ * @package workhouse\helpers
  */
 
 class HtmlServiceProvider extends ServiceProvider {
