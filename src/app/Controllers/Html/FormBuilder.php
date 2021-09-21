@@ -1,11 +1,11 @@
 <?php
 
-namespace wh1110000\Helpers\Controllers\Html;
+namespace Workhouse\Helpers\Controllers;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\HtmlString;
 use Illuminate\Support\Str;
-use wh1110000\Workhouse\Models\Lang;
+use Workhouse\Cms\Models\Lang;
 
 /**
  * Class FormBuilder
@@ -89,7 +89,7 @@ class FormBuilder extends \Collective\Html\FormBuilder {
 
 			$content = \Html::tag('div', $content->implode(''), ['class' => 'tab-content', 'id' => 'myTabContent']);
 
-			$rendered = $nav . $content;
+			$rendered = Str::finish($nav, $content);
 
 		} else {
 
@@ -246,8 +246,7 @@ class FormBuilder extends \Collective\Html\FormBuilder {
 			request()->session()->forget('errors');
 
 		} elseif($submitBtn !== false){
-		    
-		
+
 			return $this->toHtmlString($this->submit(is_string($submitBtn) ? $submitBtn : null).'</form>');
 		}
 
@@ -296,8 +295,7 @@ class FormBuilder extends \Collective\Html\FormBuilder {
 		}
 
 		$options['type'] = 'submit';
-		
-		//return parent::submit($value ?: __('cms::general.save'), array_filter($options));
+
 		return parent::button($value ?: __('cms::general.save'), array_filter($options));
 	}
 

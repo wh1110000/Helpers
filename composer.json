@@ -1,5 +1,5 @@
 {
-    "name": "wh1110000/Helpers",
+    "name": "111-0000/helpers",
     "description": "Helpers",
     "type": "library",
     "license": "MIT",
@@ -11,10 +11,10 @@
     ],
     "autoload": {
         "files": [
-            "src\\Helpers\\Functions.php"
+            "src\\app\\Helpers\\Functions.php"
         ],
         "psr-4": {
-            "wh1110000\\Helpers\\": "src/"
+            "Workhouse\\Helpers\\": "src/"
         }
     },
     "require": {
@@ -37,19 +37,19 @@
     "extra": {
         "laravel": {
             "providers": [
-                "wh1110000\\Helpers\\HelpersServiceProvider",
-                "wh1110000\\Helpers\\HtmlServiceProvider",
-                "wh1110000\\Helpers\\SweetAlertServiceProvider",
+                "Workhouse\\Helpers\\HelpersServiceProvider",
+                "Workhouse\\Helpers\\HtmlServiceProvider",
+                "Workhouse\\Helpers\\SweetAlertServiceProvider",
                 "AlbertCht\\InvisibleReCaptcha\\InvisibleReCaptchaServiceProvider"
             ],
             "aliases": {
-                "Button": "wh1110000\\Helpers\\Facades\\Button",
-                "DataTable": "wh1110000\\Helpers\\Facades\\DataTable",
-                "Fields": "wh1110000\\Helpers\\Facades\\Fields",
-                "Nav": "wh1110000\\Helpers\\Facades\\Nav",
-                "Row": "wh1110000\\Helpers\\Facades\\Row",
-                "Form": "wh1110000\\Helpers\\Facades\\Form",
-                "Html": "wh1110000\\Helpers\\Facades\\Html"
+                "Button": "Workhouse\\Helpers\\Facades\\Button",
+                "DataTable": "Workhouse\\Helpers\\Facades\\DataTable",
+                "Fields": "Workhouse\\Helpers\\Facades\\Fields",
+                "Nav": "Workhouse\\Helpers\\Facades\\Nav",
+                "Row": "Workhouse\\Helpers\\Facades\\Row",
+                "Form": "Workhouse\\Helpers\\Facades\\Form",
+                "Html": "Workhouse\\Helpers\\Facades\\Html"
             },
             "dont-discover": [
                 "laravelcollective/html"

@@ -1,15 +1,15 @@
 <?php
 
-namespace wh1110000\Helpers\Facades;
+namespace Workhouse\Helpers\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * Class Fields
+ * Class Row
  * @package Workhouse\Cms\Facades
  */
 
-class Fields extends Facade {
+class Row extends Facade {
 
 	/**
 	 * @return string
@@ -17,14 +17,14 @@ class Fields extends Facade {
 
 	protected static function getFacadeAccessor() {
 
-		return 'Fields';
+		return 'Row';
 	}
 
 	/**
 	 * @return mixed
 	 */
 
-	public static function refresh() {
+	public static function init() {
 
 		static::clearResolvedInstance(static::getFacadeAccessor());
 

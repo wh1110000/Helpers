@@ -1,11 +1,11 @@
 <?php
 
-namespace wh1110000\Helpers\Controllers\Html;
+namespace Workhouse\Helpers\Controllers;
 
 use Illuminate\Support\HtmlString;
 use Illuminate\Support\Str;
 use Illuminate\Support\ViewErrorBag;
-use wh1110000\Workhouse\Presenters\Media;
+use Workhouse\Cms\Presenters\Media;
 
 /**
  * Class Fields
@@ -1008,7 +1008,7 @@ class Fields {
 
                             <i class="fas fa-file-signature" data-toggle="tooltip" data-placement="top" title="'. ($src->getDimensions() ?? "---") .'"></i>
 
-                            <i class="fas fa-images" data-toggle="tooltip" data-placement="top" title="'. ($src->getAlt() ?? "---") .'"></i>
+                            <i class="fas fa-images" data-toggle="tooltip" data-placement="top" title="'. (optional($src)->getAlt() ?? "---") .'"></i>
                         </div>
                     </div>
                 </div>		  				

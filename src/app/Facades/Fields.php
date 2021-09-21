@@ -1,23 +1,23 @@
 <?php
 
-namespace wh1110000\Helpers\Facades;
+namespace Workhouse\Helpers\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * Class DataTable
- * @package Workhouse\DataTable\Facades
+ * Class Fields
+ * @package Workhouse\Cms\Facades
  */
 
-class DataTable extends Facade {
+class Fields extends Facade {
 
 	/**
 	 * @return string
 	 */
 
-	protected static function getFacadeAccessor() : string {
+	protected static function getFacadeAccessor() {
 
-		return 'DataTable';
+		return 'Fields';
 	}
 
 	/**

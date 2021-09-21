@@ -1,10 +1,10 @@
 <?php
 
-namespace wh1110000\Helpers;
+namespace Workhouse\Helpers;
 
 use Illuminate\Support\ServiceProvider;
-use wh1110000\Helpers\Controllers\Html\FormBuilder;
-use wh1110000\Helpers\Controllers\Html\HtmlBuilder;
+use Workhouse\Helpers\Controllers\FormBuilder;
+use Workhouse\Helpers\Controllers\HtmlBuilder;
 
 /**
  * Class HtmlServiceProvider
