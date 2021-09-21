@@ -14,7 +14,7 @@
             "src\\app\\Helpers\\Functions.php"
         ],
         "psr-4": {
-            "Workhouse\\Helpers\\": "src/"
+            "wh1110000\\Helpers\\": "src/"
         }
     },
     "require": {
@@ -37,19 +37,19 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Workhouse\\Helpers\\HelpersServiceProvider",
-                "Workhouse\\Helpers\\HtmlServiceProvider",
-                "Workhouse\\Helpers\\SweetAlertServiceProvider",
+                "wh1110000\\Helpers\\HelpersServiceProvider",
+                "wh1110000\\Helpers\\HtmlServiceProvider",
+                "wh1110000\\Helpers\\SweetAlertServiceProvider",
                 "AlbertCht\\InvisibleReCaptcha\\InvisibleReCaptchaServiceProvider"
             ],
             "aliases": {
-                "Button": "Workhouse\\Helpers\\Facades\\Button",
-                "DataTable": "Workhouse\\Helpers\\Facades\\DataTable",
-                "Fields": "Workhouse\\Helpers\\Facades\\Fields",
-                "Nav": "Workhouse\\Helpers\\Facades\\Nav",
-                "Row": "Workhouse\\Helpers\\Facades\\Row",
-                "Form": "Workhouse\\Helpers\\Facades\\Form",
-                "Html": "Workhouse\\Helpers\\Facades\\Html"
+                "Button": "wh1110000\\Helpers\\Facades\\Button",
+                "DataTable": "wh1110000\\Helpers\\Facades\\DataTable",
+                "Fields": "wh1110000\\Helpers\\Facades\\Fields",
+                "Nav": "wh1110000\\Helpers\\Facades\\Nav",
+                "Row": "wh1110000\\Helpers\\Facades\\Row",
+                "Form": "wh1110000\\Helpers\\Facades\\Form",
+                "Html": "wh1110000\\Helpers\\Facades\\Html"
             },
             "dont-discover": [
                 "laravelcollective/html"
