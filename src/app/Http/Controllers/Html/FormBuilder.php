@@ -1,11 +1,12 @@
 <?php
 
-namespace workhouse\helpers\Controllers;
+namespace workhouse\helpers\Http\Controllers\Html;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\HtmlString;
 use Illuminate\Support\Str;
 use workhouse\cms\Models\Lang;
+use workhouse\helpers\Http\Controllers\Html\Admin\Tab;
 
 /**
  * Class FormBuilder
@@ -33,6 +34,7 @@ class FormBuilder extends \Collective\Html\FormBuilder {
 		$html = collect();
 
 		if($rows instanceof Tab){
+
 
 			foreach ($rows->tab as $tab){
 

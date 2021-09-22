@@ -1,11 +1,11 @@
 <?php
 
-namespace workhouse\helpers\Controllers;
+namespace workhouse\helpers\Http\Controllers\Html;
 
 use Illuminate\Support\HtmlString;
 use Illuminate\Support\Str;
 use Illuminate\Support\ViewErrorBag;
-use workhouse\cms\Presenters\Media;
+use workhouse\cms\Models\Presenters\Media;
 
 /**
  * Class Fields
@@ -642,7 +642,7 @@ class Fields {
 				$model = get_parent_class($model);
 			}
 
-			$model = Str::finish(Str::replaceFirst(Str::contains($model, '\Presenters\\') ? 'Presenters' : 'Models', 'Requests', $model), 'Request');
+			$model = Str::finish(Str::replaceFirst(Str::contains($model, '\Models\Presenters\\') ? 'Presenters' : 'Models', 'Requests', $model), 'Request');
 
 			if(class_exists($model)){
 
@@ -913,17 +913,17 @@ class Fields {
 			'<div class="card" style="width: 18rem;">
 
 				<div class="card-body preview">
-												
+
   					<img src="'.$src.'" class="card-img-top" id="preview-'.$id.'" alt="">
-  			
+
   				</div>
-  					
+
   				<hr />
-  			
+
   				<div class="card-body">
-    
+
 				    <a href="'.route('admin.media.show.modal', ['id' => $id]).'" data-id="" class="card-link active-modal">Change</a>
-				    
+
 				    <a href="'.route('admin.media.upload.modal', ['id' => $id]).'" class="card-link active-modal">Upload</a>';
 
 		if($this->file) {
@@ -934,16 +934,16 @@ class Fields {
 		$field .= \Form::hidden($this->name, is_object($this->value) ? $this->value->getId() : $this->value, ['id' => $id]).'</div>
 			</div>';
 
-		$field .=  ' 				  
+		$field .=  '
 					<script>
 						 $(document).ready(function() {
-		
+
 							 $(document).on("click", ".btn-delete-media", function(e) {
-		
+
 								e.preventDefault();
-		
+
 								var file = $(this).attr("data-file");
-		
+
 								Swal.fire({
 									title: "Are you sure?",
 									type: "warning",
@@ -952,13 +952,13 @@ class Fields {
 									cancelButtonColor: "#3085d6",
 									confirmButtonText: "Yes, delete it!"
 						        }).then((willDelete) => {
-		
+
 									if (willDelete) {
-		
+
 										$("#"+file).val("");
-											 
+
 										var imgId = $("#"+file).closest(".card").find(".preview").find("img").attr(\'id\');
-											 
+
 										$("#"+file).closest(".card").find(".preview").html("<img src=\"'.(str_replace('"', '\'', $src)).'\" class=\"card-img-top\" id=\"+imgI+\" alt=\"\">");
 									}
 								});
@@ -987,10 +987,10 @@ class Fields {
 				'.\Html::image($src->getFilePlaceholder(), null, ["id" => "preview-'.$id.'", 'class' => 'card-img-top rounded-0', 'popup' => true]).'
 
 				<div class="header">
-                   
+
                    '. $src->getFilename() .'
                 </div>
-  			
+
   				<div class="footer">
                 	<div class="buttons-sm">
                     	<a href="'. route("admin.media.edit.modal", $src) .'" class="btn btn-warning btn-sm active-modal"><i class="fas fa-edit" aria-hidden="true"></i> Edit</a>
@@ -1011,7 +1011,7 @@ class Fields {
                             <i class="fas fa-images" data-toggle="tooltip" data-placement="top" title="'. (optional($src)->getAlt() ?? "---") .'"></i>
                         </div>
                     </div>
-                </div>		  				
+                </div>
             </div>';
 
 		return $field ;

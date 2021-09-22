@@ -3,8 +3,8 @@
 namespace workhouse\helpers\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use workhouse\helpers\Controllers\FormBuilder;
-use workhouse\helpers\Controllers\HtmlBuilder;
+use workhouse\helpers\Http\Controllers\Html\FormBuilder;
+use workhouse\helpers\Http\Controllers\Html\HtmlBuilder;
 
 /**
  * Class HtmlServiceProvider

@@ -1,6 +1,6 @@
 <?php
 
-namespace workhouse\helpers\Controllers\Uploader;
+namespace workhouse\helpers\Http\Controllers\Uploader;
 
 use Illuminate\Support\Facades\Storage;
 

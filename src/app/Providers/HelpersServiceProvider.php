@@ -6,10 +6,10 @@ use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use workhouse\cms\Services\Menu\Admin;
 use workhouse\cms\Services\Menu\Website;
-use workhouse\helpers\Controllers\Button;
-use workhouse\helpers\Controllers\DataTable;
-use workhouse\helpers\Controllers\Fields;
-use workhouse\helpers\Controllers\Row;
+use workhouse\helpers\Http\Controllers\Html\Button;
+use workhouse\helpers\Http\Controllers\DataTable\DataTable;
+use workhouse\helpers\Http\Controllers\Html\Fields;
+use workhouse\helpers\Http\Controllers\Html\Admin\Row;
 use workhouse\helpers\View\Components\Cookie;
 use workhouse\helpers\View\Components\Modal;
 use Doctrine\Inflector\InflectorFactory;
@@ -203,9 +203,9 @@ class HelpersServiceProvider extends ServiceProvider {
 
 	public function loadViews(){
 
-		$this->loadViewsFrom(__DIR__.'/resources/views/DataTable', 'datatable');
-		$this->loadViewsFrom(__DIR__.'/resources/views/Modal', 'modal');
-		$this->loadViewsFrom(__DIR__.'/resources/views/Cookie', 'cookie');
+		$this->loadViewsFrom(__DIR__.'/../../resources/views/DataTable', 'datatable');
+		$this->loadViewsFrom(__DIR__.'/../../resources/views/Modal', 'modal');
+		$this->loadViewsFrom(__DIR__.'/../../resources/views/Cookie', 'cookie');
 	}
 
 	/**
@@ -215,7 +215,7 @@ class HelpersServiceProvider extends ServiceProvider {
 	public function loadPublish(){
 
 		$this->publishes([
-			__DIR__ . '/resources/views' => resource_path('views/vendor/datatable')
+			__DIR__ . '/../../resources/views' => resource_path('views/vendor/datatable')
 		], 'datatable-view');
 	}
 

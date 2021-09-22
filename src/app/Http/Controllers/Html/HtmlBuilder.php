@@ -1,6 +1,6 @@
 <?php
 
-namespace workhouse\helpers\Controllers;
+namespace workhouse\helpers\Http\Controllers\Html;
 
 use function GuzzleHttp\Psr7\mimetype_from_filename;
 use Illuminate\Support\Optional;
@@ -30,7 +30,7 @@ class HtmlBuilder extends TemplateBuilder {
 			if($object->fileExists()){
 
 				$url = $object->getFile();
-				
+
 				$attributes['alt'] = $alt ?: $object->getAlt();
 
 			} else {
@@ -41,11 +41,11 @@ class HtmlBuilder extends TemplateBuilder {
 		} else {
 
 			$url = $object;
-			
+
 			$object = $instance->where('filename', \Illuminate\Support\Str::afterLast($url, '/'))->first();
-            
+
             if($alt){
-                
+
 			    $attributes['alt'] = $alt;
             }
 		}
@@ -56,12 +56,12 @@ class HtmlBuilder extends TemplateBuilder {
 			if(isset($attributes['placeholder']) && $attributes['placeholder'] == true){
 
 				$url = \Html::placeholder();
-				
+
 			} else {
-			    
+
 				 return $this->toHtmlString('');
 			}
-		
+
 		}
 
 		$attributes['class'] = $attributes['class'] ?? [];
@@ -99,7 +99,7 @@ class HtmlBuilder extends TemplateBuilder {
         if((!isset($attributes['alt']) || is_null($attributes['alt'])) && ($object instanceof $instance)){
             $attributes['alt'] = optional($object)->getAlt();
         }
-		    
+
 		$img = $this->toHtmlString('<img src="' . $this->url->asset($url, $secure) . '"' . $this->attributes($attributes) . '>');
 
 		if($isPopup) {

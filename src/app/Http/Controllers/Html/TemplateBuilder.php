@@ -1,6 +1,6 @@
 <?php
 
-namespace workhouse\helpers\Controllers;
+namespace workhouse\helpers\Http\Controllers\Html;
 
 use Collective\Html\HtmlBuilder;
 use Favicon\FaviconHtmlGenerator;
